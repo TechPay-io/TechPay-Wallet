@@ -1,0 +1,11 @@
+export const ADD_ACCOUNT = 'addAccount';
+export const ADD_LEDGER_ACCOUNT = 'addLedgerAccount';
+export const ADD_METAMASK_ACCOUNT = 'addMMAccount';
+export const ADD_COINBASE_ACCOUNT = 'addCoinbaseAccount';
+export const ADD_WALLETCONNECT_ACCOUNT = 'addWalletConnectAccount';
+export const UPDATE_ACCOUNT_BALANCE = 'udpateAccountBalance';
+export const UPDATE_ACCOUNTS_BALANCES = 'udpateAccountsBalances';
+export const UPDATE_ACCOUNT = 'updateAccount';
+export const REMOVE_ACCOUNT_BY_ADDRESS = 'removeAccountByAddress';
+export const ADD_CONTACT = 'addContact';
+export const UPDATE_CONTACT = 'updateContact';

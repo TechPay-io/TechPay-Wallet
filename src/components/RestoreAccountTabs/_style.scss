@@ -1,0 +1,44 @@
+@import "../../assets/scss/vars";
+
+.restore-account-tabs {
+    .f-tabs {
+        ul {
+            justify-content: space-evenly;
+            border-bottom: none;
+
+            li {
+                &.btn {
+                    flex-direction: column;
+                    margin-inline-end: 8px;
+                    min-width: 128px;
+                    padding-top: 16px;
+                    padding-bottom: 16px;
+
+                    > *:first-child {
+                        height: 100%;
+                    }
+
+                    span {
+                        display: block;
+                        text-align: center;
+                        padding-top: 8px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-max($bp-small) {
+    .restore-account-tabs {
+        .f-tabs {
+            ul {
+                li {
+                    &.btn {
+                        min-width: auto;
+                    }
+                }
+            }
+        }
+    }
+}

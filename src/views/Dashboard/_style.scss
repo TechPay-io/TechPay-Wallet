@@ -1,0 +1,15 @@
+@import '../../assets/scss/vars';
+
+.view-dashboard {
+    .h1 {
+        font-family: $font-family-proxima;
+        //font-size: 28px;
+        //font-weight: normal;
+        margin-top: 28px;
+        margin-bottom: 0;
+    }
+
+    main {
+        padding-top: 0;
+    }
+}

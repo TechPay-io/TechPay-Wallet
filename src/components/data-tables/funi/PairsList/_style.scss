@@ -1,0 +1,20 @@
+.pairs-list {
+    .token-liquidity {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin-inline-end: -10px;
+
+        .f-crypto-symbol {
+            margin-inline-start: 8px;
+            margin-inline-end: 0;
+        }
+    }
+
+    .mobile-view {
+        .token-liquidity {
+            display: block;
+            margin-inline-end: 0;
+        }
+    }
+}

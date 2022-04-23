@@ -1,0 +1,10 @@
+.f-account-t-amount {
+    font-weight: bold;
+    &.received {
+        color: var(--f-success-color);
+    }
+
+    .f-token-value {
+        margin-inline-start: -4px;
+    }
+}

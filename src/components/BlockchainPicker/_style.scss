@@ -1,0 +1,64 @@
+@import "../../assets/scss/vars";
+
+.blockchain-picker {
+    --blockchain-picker-focus-background-color: #eee;
+
+    display: flex;
+    padding: 56px 0;
+
+    li {
+        flex: 1;
+    }
+
+    label {
+        display: block;
+        width: 100%;
+        text-align: start;
+        padding-bottom: 8px;
+        cursor: pointer;
+
+        > span {
+            font-family: $font-family-proxima;
+            font-size: 28px;
+            opacity: 0.45;
+
+            .logo-active {
+                display: none;
+            }
+
+            .title {
+                padding-inline-start: 16px;
+            }
+        }
+
+        input {
+            &:checked + span {
+                opacity: 1;
+
+                .logo-active {
+                    display: initial;
+                }
+
+                .logo-inactive {
+                    display: none;
+                }
+            }
+
+            &:disabled + span {
+                opacity: 0.25;
+                cursor: not-allowed;
+            }
+
+            &:focus.focus-visible + span {
+                background: var(--blockchain-picker-focus-background-color);
+            }
+        }
+    }
+}
+
+@include media-max($bp-menu) {
+    .blockchain-picker {
+        display: block;
+        padding: 8px 0;
+    }
+}

@@ -1,0 +1,40 @@
+@import "../../assets/scss/vars";
+
+.create-account-view {
+    .f-card:not(.off).window {
+        .header {
+            color: #fff;
+            background: $create-account-color;
+            //border-radius: $f-card-border-radius $f-card-border-radius 0 0;
+            border-radius: 20px 20px 0 0;
+
+            h1 {
+                margin-bottom: 0;
+
+                .steps {
+                    padding-inline-start: 24px;
+
+                    .count {
+                        opacity: 0.6;
+                    }
+                }
+
+                .router-link {
+                    color: #fff;
+                    float: right;
+                    opacity: 0.6;
+
+                    transition: opacity $transition-length $transition-func;
+
+                    &:hover {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .body {
+            min-height: 440px;
+        }
+    }
+}

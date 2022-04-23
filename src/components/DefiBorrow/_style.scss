@@ -1,0 +1,179 @@
+@import "../../assets/scss/vars";
+
+.defi-borrow {
+    .grid {
+        display: grid;
+        //grid-template-columns: 1fr 1fr 1fr;
+        //grid-template-columns: auto 50% auto;
+        grid-template-columns: 180px auto 180px;
+        grid-template-rows: auto;
+        grid-gap: 16px 16px;
+        margin: 64px 8px 0 8px;
+
+        .f-message {
+            grid-area: 2 / 1 / 2 / 4;
+        }
+
+        .defi-price-input-col {
+            place-self: center;
+
+            .defi-price-input {
+                > input {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .minting-limit-col {
+            text-align: end;
+        }
+
+        .right-col {
+            text-align: end;
+        }
+    }
+
+    .token-info {
+        position: absolute;
+        bottom: 96px;
+        width: 100px;
+        //color: $grey-color-semi;
+        color: #ddd;
+        z-index: 0;
+
+        &.increase {
+            right: 0;
+        }
+
+        .token-info-label {
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+
+    .token-label {
+        position: absolute;
+        top: -68px;
+        width: 100%;
+        text-align: center;
+        z-index: 0;
+        font-size: 26px;
+
+        .f-select-button {
+            --f-select-button-arrow-size: 16px;
+            --f-select-button-arrow-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path style="fill: rgb(40,111,246);" d="M207.029 381.476L12.686 187.132c-9.373-9.373-9.373-24.569 0-33.941l22.667-22.667c9.357-9.357 24.522-9.375 33.901-.04L224 284.505l154.745-154.021c9.379-9.335 24.544-9.317 33.901.04l22.667 22.667c9.373 9.373 9.373 24.569 0 33.941L240.971 381.476c-9.373 9.372-24.569 9.372-33.942 0z"/></svg>');
+        }
+    }
+
+    .defi-price-input {
+        input.text-input {
+            position: relative;
+            z-index: 1;
+            //font-size: 96px;
+            font-size: 80px;
+        }
+    }
+
+    .f-colored-number-range {
+        color: var(--f-primary-color);
+        font-weight: 600;
+    }
+
+    &.borrow-or-repay {
+        .token-info {
+            display: none;
+        }
+    }
+}
+
+html[dir="rtl"], body[dir="rtl"] {
+    .defi-borrow {
+        .token-info {
+            &.increase {
+                right: unset;
+                left: 0;
+            }
+        }
+    }
+}
+
+/*
+.view-defi {
+    .defi-borrow {
+        .df-data-item {
+            margin-bottom: 40px;
+        }
+    }
+}
+*/
+
+/* Tablet breakpoint */
+@include media-max($bp-large) {
+    .defi-borrow {
+        .grid {
+            .f-message {
+                grid-area: 3 / 1 / 3 / 4;
+            }
+
+            .defi-price-input-col {
+                grid-area: 2 / 1 / 2 / 4;
+                margin-top: 40px;
+            }
+
+            .minting-limit-col {
+                text-align: center;
+                padding-bottom: 32px;
+            }
+
+            .right-col {
+                display: initial;
+            }
+        }
+    }
+
+    .view-defi {
+        .perex {
+            display: none;
+        }
+    }
+}
+
+@include media-max($bp-small) {
+    .defi-borrow {
+        .grid {
+            grid-template-columns: 1fr 1fr;
+            margin-top: 24px;
+
+            .defi-price-input-col {
+                grid-area: 2 / 1 / 2 / 3;
+            }
+
+            .f-message {
+                grid-area: 3 / 1 / 3 / 3;
+            }
+        }
+
+        .defi-price-input {
+            input.text-input {
+                font-size: 72px;
+            }
+        }
+
+        .token-info {
+            display: none;
+        }
+
+        .f-circle-progress {
+            --f-circle-progress-width: 120px;
+            --f-circle-progress-height: 120px;
+        }
+    }
+
+    .view-defi {
+        .defi-borrow {
+            .df-data-item {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}

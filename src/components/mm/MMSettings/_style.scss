@@ -1,0 +1,13 @@
+.mmsettings {
+    &_section {
+        margin-bottom: 8px;
+
+        h3 {
+            margin-bottom: 8px;
+        }
+    }
+
+    &_section + .mmsettings_section {
+        margin-top: 24px;
+    }
+}
